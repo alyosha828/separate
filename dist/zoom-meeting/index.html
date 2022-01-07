@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Zoom WebSDK</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.9.7/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.9.7/css/react-select.css" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- app.honyaku.ai -->
+    <!-- <meta http-equiv="origin-trial"
+        content="AiX9L4VpeQmkNF2s1k2GkUVSq2aEEfleys3bz6mbKKcmfRYfrgK88bZ5KZueJyBWwVkBgICix0TS1e7Mman+pwsAAAB4eyJvcmlnaW4iOiJodHRwczovL2FwcC5ob255YWt1LmFpOjQ0MyIsImZlYXR1cmUiOiJVbnJlc3RyaWN0ZWRTaGFyZWRBcnJheUJ1ZmZlciIsImV4cGlyeSI6MTYzOTUyNjM5OSwiaXNTdWJkb21haW4iOnRydWV9"> -->
+    <!-- localhost -->
+    <meta http-equiv="origin-trial"
+        content="AuWWPC2qBrQuwrXzmWKfkOmnHm6SX3SyF26OXex5gQW4U9sn9hlenvXSZ/xdp+TImogC9G9iFOmqSLQsCyyDSQEAAABgeyJvcmlnaW4iOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE2Mzk1MjYzOTl9">
+    <style type="text/css">
+        .join-dialog {
+            display: none !important;
+        }
+
+        .audio-option-menu__pop-menu>li:last-child {
+            display: none !important;
+        }
+
+        .audio-option-menu__pop-menu>li:nth-last-child(2) {
+            display: none !important;
+        }
+
+        .backdrop {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 9999;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .audioBtnWrap {
+            padding: 30px 80px;
+            background-color: #3C3C3C;
+        }
+
+        .audioBtn {
+            display: inline-block;
+            font-weight: 400;
+            color: #212529;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            font-weight: 300;
+            padding: 0.7em 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://source.zoom.us/1.9.7/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/1.9.7/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/1.9.7/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/1.9.7/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/1.9.7/lib/vendor/lodash.min.js"></script>
+    <script src="https://source.zoom.us/zoom-meeting-1.9.7.min.js"></script>
+    <script src="js/tool.js"></script>
+    <script src="js/vconsole.min.js"></script>
+    <script src="js/meeting.js"></script>
+
+    <div id="audio_modal">
+        <div class="audioBtnWrap">
+            <button id="audiobutton" class="audioBtn">Turn on the camera and microphone.</button>
+        </div>
+    </div>
+</body>
+
+</html>
